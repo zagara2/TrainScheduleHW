@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Schedule</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+<div id = "headingContainer">
+
+<div class = "jumbotron" id = "bigheading">
+ANYTIME IS TRAIN TIME
+<div id = "subtitle">
+Choo choo. Chee chee.
+</div>
+
+
+
+</div>
+</div>
+
+<div class="panel panel-default" id = "trainscheduleTable">
+<div class="panel-heading">Current Train Schedule</div>
+<div class="panel-body">
+<table class="table" id = "mainTable">
+    <tr>
+        <th><b>Train Name</b></th>
+        <th><b>Destination</b></th>
+        <th><b>Frequency(min)</b></th>
+        <th><b>Next Arrival</b></th>
+        <th><b>Minutes Away</b></th>
+    </tr>
+<!-- placeholder row -->
+    <tr>    
+        <td>Oregon Trail</td>
+        <td>Salem</td>
+        <td>3600</td>
+        <td>01:30</td>
+        <td>10</td>
+    </tr>
+        
+
+    </table>
+    </div>
+</div>
+<br>
+
+<div id = "inputNewTrain">
+<div class="panel panel-default">
+
+<div class="panel-heading">Add Train</div>
+<div class="panel-body">
+    <form>
+  <div class="form-group">
+    <label for="trainName">Train Name</label>
+    <input type="text" class="form-control" id="trainName" placeholder="e.g. Trenton Express">
+  </div>
+  <div class="form-group">
+    <label for="Destination">Destination</label>
+    <input type="text" class="form-control" id="Destination" placeholder="e.g. Trenton">
+  </div>
+  <div class="form-group">
+    <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+    <input type="text" class="form-control" id="firstTrain" placeholder="e.g. 14:35">
+  </div>
+  <div class="form-group">
+    <label for="Frequency">Frequency(min)</label>
+    <input type="text" class="form-control" id="Frequency" placeholder="e.g. 25">
+  </div>
+
+  
+  
+  
+  <button type="submit" class="btn btn-default" id = "submitButton">Submit</button>
+</form>
+  </div>
+</div>
+</div>
+
+
+
+<script type="text/javascript" src = "assets/javascript/app.js"></script>
+</body>
+</html>
