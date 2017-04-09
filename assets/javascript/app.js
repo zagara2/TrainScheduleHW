@@ -22,8 +22,34 @@
       var firstTrain = $("#firstTrain").val().trim();
       var frequency = $("#frequency").val().trim();
 
-      var nextArrival = "12:30"; //placeholder
-      var minutesAway = "10"; //placeholder
+      var firstTimeConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
+    console.log(firstTimeConverted);
+
+    var currentTime = moment();
+    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm a"));
+
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
+
+    // Time apart (remainder)
+    var tRemainder = diffTime % frequency;
+    console.log(tRemainder);
+
+    // Minute Until Train
+    var tMinutesTillTrain = frequency - tRemainder;
+    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+    // Next Train
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    var nextTrainFormatted = moment(nextTrain).format("hh:mm a");
+    console.log("ARRIVAL TIME: " + nextTrainFormatted);
+
+
+      var nextArrival = nextTrainFormatted.toString(); 
+      var minutesAway = JSON.stringify(tMinutesTillTrain); 
+      console.log(nextArrival);
+      console.log(minutesAway);
 
       event.preventDefault();
 
