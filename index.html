@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Train Schedule</title>
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
@@ -15,16 +17,16 @@
 
 <body>
     <div id="headingContainer">
-        <div class="jumbotron" id="bigheading">
-            ANYTIME IS TRAIN TIME
-            <div id="subtitle">
+        <div id="bigheading">
+            anytime is train time.
+            <!-- <div id="subtitle">
                 Choo choo. Chee chee.
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="panel panel-default" id="trainscheduleTable">
         <div class="panel-heading">Current Train Schedule</div>
-        <div class="panel-body">
+        <div class="panel-body" id = "tSched">
             <table class="table" id="mainTable">
                 <tr>
                     <th><b>Train Name</b></th>

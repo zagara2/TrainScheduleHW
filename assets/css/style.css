@@ -10,3 +10,74 @@
 #train1 {
     display: none;
 }
+
+
+body {
+    background: url("../images/trainbgnowordsDOTS4.jpg");
+    background-size: cover;
+    background-position:100% 100%;
+    background-repeat:no-repeat;
+     /*background-attachment: local;*/
+
+}
+
+#trainscheduleTable {
+	
+	/*display:block;
+	float:left;*/
+	margin-left: 15%;
+	margin-right:15%;
+	
+}
+
+#inputNewTrain {
+	/*display: block;
+	float:right;*/
+	margin-left: 15%;
+	margin-right:15%;
+	margin-bottom:10%;
+	
+
+}
+
+
+
+.panel-body {
+	background-color:white;
+	border-style: dashed;
+	color:#008000;
+	font-family: 'Palanquin Dark', sans-serif;
+	margin:20px;
+}
+
+
+.panel-default>.panel-heading {
+	background-color:white;
+	color:#008000;
+	text-align:center;
+	font-family: 'Concert One', cursive;
+	/*font-family: 'Palanquin Dark', sans-serif;*/
+	border-color:#008000;
+	border-width: 5px;
+	font-size:30px;
+	
+
+
+
+}
+
+#bigheading {
+	font-family: 'Concert One', cursive;
+	color:white;
+	font-size:80px;
+	text-shadow: -3px 0 #008000, 0 3px #008000, 3px 0 #008000, 0 -3px #008000;
+	padding:20px;
+
+}
+
+#submitButton {
+	font-family: 'Palanquin Dark', sans-serif;
+	color:#008000;
+
+
+}
