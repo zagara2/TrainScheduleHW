@@ -1,11 +1,12 @@
 #headingContainer {
-	text-align:center;
+    text-align: center;
 }
+
 
 /*#mainTable tr > *:nth-child(5) {
     display: none;
 }*/
 
 #train1 {
-	display:none;
+    display: none;
 }
