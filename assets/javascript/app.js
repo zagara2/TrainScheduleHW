@@ -18,17 +18,17 @@
 // //on page load
 //    database.ref().on("value", function(snapshot) {
 //     console.log("page load");
-    
-//     // need:current time, first train time, frequency
-//     var table = document.getElementById("mainTable");
-// for (var i = 1, row; row = table.rows[i]; i++) {
-//    //iterate through rows
-//    //rows would be accessed using the "row" variable assigned in the for loop
-//    var frequency = row.cells[2];
-//    // console.log(frequency);
-//    var firstTrain = row.cells[5];
-//    // console.log(firstTrain);
-//    var firstTimeConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
+// var table = document.getElementById('mainTable');
+//     // console.log(table.children[0].children[1].children[0].innerHTML);
+//     // console.log(table.children[0].children[2].children[0].innerHTML);
+//     console.log(table.children[0].children.length);
+
+//     for (var i = 1; i<table.children[0].children.length; i++) {
+//       console.log("loop start");
+//       var frequency = table.children[0].children[i].children[2].innerHTML;
+//       var firstTrain = table.children[0].children[i].children[5].innerHTML;
+      
+//       var firstTimeConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
 //     console.log(firstTimeConverted);
 
 //     var currentTime = moment();
@@ -54,18 +54,62 @@
 
 //       var nextArrival = nextTrainFormatted.toString(); 
 //       var minutesAway = JSON.stringify(tMinutesTillTrain); 
-//     var myArrival = row.cells[3];
-//     myArrival.innerHTML = nextArrival;
-//     // console.log("changed" + nextArrival);
-//     // row.cells[4].innerHTML = minutesAway;
-//     // console.log("changed" + minutesAway);
+
+//       table.children[0].children[i].children[3].innerHTML= nextArrival;
+//       table.children[0].children[i].children[4].innerHTML = minutesAway;
+//       console.log(nextArrival);
+//       console.log(minutesAway);
+
+//     }
+
+    
+// //     // need:current time, first train time, frequency
+// //     var table = document.getElementById("mainTable");
+// // for (var i = 1, row; row = table.rows[i]; i++) {
+// //    //iterate through rows
+// //    //rows would be accessed using the "row" variable assigned in the for loop
+// //    var frequency = row.cells[2];
+// //    // console.log(frequency);
+// //    var firstTrain = row.cells[5];
+// //    // console.log(firstTrain);
+// //    var firstTimeConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
+// //     console.log(firstTimeConverted);
+
+// //     var currentTime = moment();
+// //     console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm a"));
+
+// //     // Difference between the times
+// //     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+// //     console.log("DIFFERENCE IN TIME: " + diffTime);
+
+// //     // Time apart (remainder)
+// //     var tRemainder = diffTime % frequency;
+// //     console.log(tRemainder);
+
+// //     // Minute Until Train
+// //     var tMinutesTillTrain = frequency - tRemainder;
+// //     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+// //     // Next Train
+// //     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+// //     var nextTrainFormatted = moment(nextTrain).format("hh:mm a");
+// //     console.log("ARRIVAL TIME: " + nextTrainFormatted);
+
+
+// //       var nextArrival = nextTrainFormatted.toString(); 
+// //       var minutesAway = JSON.stringify(tMinutesTillTrain); 
+// //     var myArrival = row.cells[3];
+// //     myArrival.innerHTML = nextArrival;
+// //     // console.log("changed" + nextArrival);
+// //     // row.cells[4].innerHTML = minutesAway;
+// //     // console.log("changed" + minutesAway);
 
 
 
-// }
+// // }
 
 
-//     });
+    // });
 
 
 
@@ -137,27 +181,27 @@
   database.ref().on("child_added", function(childSnapshot) {
 
     var firstTimeConverted = moment(childSnapshot.val().firstTrain, "hh:mm").subtract(1, "years");
-    console.log(firstTimeConverted);
+    // console.log(firstTimeConverted);
 
     var currentTime = moment();
-    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm a"));
+    // console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm a"));
 
     // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-    console.log("DIFFERENCE IN TIME: " + diffTime);
+    // console.log("DIFFERENCE IN TIME: " + diffTime);
 
     // Time apart (remainder)
     var tRemainder = diffTime % childSnapshot.val().frequency;
-    console.log(tRemainder);
+    // console.log(tRemainder);
 
     // Minute Until Train
     var tMinutesTillTrain = childSnapshot.val().frequency - tRemainder;
-    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+    // console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     var nextTrainFormatted = moment(nextTrain).format("hh:mm a");
-    console.log("ARRIVAL TIME: " + nextTrainFormatted);
+    // console.log("ARRIVAL TIME: " + nextTrainFormatted);
 
     var nextArrival = nextTrainFormatted.toString(); 
       var minutesAway = JSON.stringify(tMinutesTillTrain); 
@@ -167,11 +211,75 @@
       $("#mainTable").append('<tr><td>' + childSnapshot.val().trainName + '</td><td>' + childSnapshot.val().destination + '</td><td>' + childSnapshot.val().frequency + '</td><td>' + nextArrival + '</td><td>' + minutesAway + '</td><td>'+ childSnapshot.val().firstTrain+'</td></tr>');
       
       // $("#firstTrainTimes").append("<p>"+childSnapshot.val().firstTrain+"</p>");
-      trainsArray.push(childSnapshot.val().trainName);
+      // function update () {
+      //   console.log("update function");
+        
+      //   $("#mainTable").append('<tr><td>' + childSnapshot.val().trainName + '</td><td>' + childSnapshot.val().destination + '</td><td>' + childSnapshot.val().frequency + '</td><td>' + nextArrival + '</td><td>' + minutesAway + '</td><td>'+ childSnapshot.val().firstTrain+'</td></tr>');
+
+      // }
+
+      // intervalId = setInterval(update, 10000);
+
+
 
   });
 
-  console.log(trainsArray);
+  function update() {
+
+    var table = document.getElementById('mainTable');
+    // console.log(table.children[0].children[1].children[0].innerHTML);
+    // console.log(table.children[0].children[2].children[0].innerHTML);
+    // console.log(table.children[0].children.length);
+
+    for (var i = 1; i<table.children[0].children.length; i++) {
+      // console.log("loop start");
+      var frequency = table.children[0].children[i].children[2].innerHTML;
+      var firstTrain = table.children[0].children[i].children[5].innerHTML;
+      
+      var firstTimeConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
+    // console.log(firstTimeConverted);
+
+    var currentTime = moment();
+    // console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm a"));
+
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    // console.log("DIFFERENCE IN TIME: " + diffTime);
+
+    // Time apart (remainder)
+    var tRemainder = diffTime % frequency;
+    // console.log(tRemainder);
+
+    // Minute Until Train
+    var tMinutesTillTrain = frequency - tRemainder;
+    // console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+    // Next Train
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    var nextTrainFormatted = moment(nextTrain).format("hh:mm a");
+    // console.log("ARRIVAL TIME: " + nextTrainFormatted);
+
+
+      var nextArrival = nextTrainFormatted.toString(); 
+      var minutesAway = JSON.stringify(tMinutesTillTrain); 
+
+      table.children[0].children[i].children[3].innerHTML= nextArrival;
+      table.children[0].children[i].children[4].innerHTML = minutesAway;
+      // console.log(nextArrival);
+      // console.log(minutesAway);
+
+    }
+  }
+
+function updateInterval() { 
+console.log("update"); 
+
+intervalId = setInterval(update, 10000);
+}
+
+updateInterval();
+
+ 
 
 
  // var ancestor = document.getElementById('firstTrainTimes'),
