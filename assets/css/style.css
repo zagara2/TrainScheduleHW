@@ -13,7 +13,7 @@
 
 
 body {
-    background: url("../images/trainbgnowordsDOTS4.jpg");
+    background: url("../images/trainbgnowordsDOTS6.jpg");
     background-size: cover;
     background-position:100% 100%;
     background-repeat:no-repeat;
@@ -81,3 +81,86 @@ body {
 
 
 }
+
+@media screen and (max-width: 1290px) {
+
+	body {
+    background: url("../images/trainbgnowordsdots7.jpg");
+     background-size: cover;
+    background-position:100% 100%;
+    background-repeat:no-repeat;
+}
+
+	}
+
+	@media screen and (max-width: 1034px) {
+
+	body {
+    background: url("../images/bgdots8.jpg");
+     background-size: cover;
+    background-position:100% 100%;
+    background-repeat:no-repeat;
+}
+
+	}
+
+
+	@media screen and (max-width: 650px) {
+		#trainscheduleTable {
+	
+	font-size:10px;
+	
+}
+
+#inputNewTrain {
+	font-size:10px;
+	
+
+}
+
+#bigheading {
+	font-size:26px;
+}
+
+.panel-default>.panel-heading {
+	font-size:12px;
+}
+
+
+}
+
+@media screen and (max-width: 520px) { 
+
+	#trainscheduleTable {
+	
+	font-size:4px;
+	
+}
+
+#inputNewTrain {
+	font-size:4px;
+	
+
+}
+
+.panel-body {
+	
+	margin:2px;
+}
+
+body {
+    background: url("../images/trainbgup.jpg");
+     background-size: contain;
+    /*background-position:100% 100%;*/
+    /*background-repeat:no-repeat;*/
+}
+
+
+
+	}
+
+
+
+
+
+
