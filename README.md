@@ -33,14 +33,9 @@ The site is best viewed on a small to moderately large desktop or notebook (betw
 
 The site's background is intentionally formatted somewhat differently for mobile, but is basically the same.
 
-When the page is loaded properly, it should look like this on a desktop/notebook/tablet:
+When the page is loaded properly, it should look like this:
 
 ![Desktop/Notebook/Tablet Screen](/assets/images/trainschedule.JPG)
-
-And it should look like this on mobile:
-
-![Mobile Screen](/assets/images/mobile.JPG)
-**(top part of page; rest of page is visible if one keeps scrolling)**
 
 ## Future Plans for Improvement
 
