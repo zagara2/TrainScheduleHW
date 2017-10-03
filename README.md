@@ -23,7 +23,7 @@ The site is currently deployed at https://zagara2.github.io/TrainScheduleHW/ .
 
 The site has been tested in Chrome, Firefox, and Internet Explorer. It works exactly as it should on Chrome and Internet Explorer. 
 
-On Firefox, trains which are already in the database update as they should according to the passing of time, and the display automatically updates when a new train is added by another user in a different window - however, a `ReferenceError: event is not defined` is thrown when the user inputs the data for a new train.
+On Firefox, trains which are already in the database update as they should according to the passing of time, and the display automatically updates when a new train is added by another user - however, a `ReferenceError: event is not defined` is thrown when the user inputs the data for a new train.
 
 Plans to test on Safari are upcoming.
 
