@@ -35,8 +35,11 @@ When the page is loaded properly, it should look like this:
 
 ![Homepage](/assets/images/trainschedule.JPG)
 
+(The background image is designed somewhat differently for mobile, but negligibly so.)
+
 ## Future Plans for Improvement
 
 * Try adding update and remove buttons for each train. Let the user edit the row's elements-- allow them to change a train's Name, Destination and Arrival Time (and then, by relation, minutes to arrival).
 
 * Do a little cleaning, i.e., go back into my Firebase database and remove the lazily-named trains put there for testing purposes.
+
