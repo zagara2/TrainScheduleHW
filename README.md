@@ -34,6 +34,7 @@ The site is best viewed on a small to moderately large desktop or notebook (betw
 When the page is loaded properly, it should look like this on mobile:
 
 ![Mobile homepage](/assets/images/mobile4.JPG)
+
 **(top part of page, rest of page is visible if one keeps scrolling)**
 
 And it should look like this on a desktop/notebook/tablet:
