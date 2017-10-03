@@ -39,7 +39,7 @@ When the page is loaded properly, it should look like this on a desktop/notebook
 
 And it should look like this on mobile:
 
-![Mobile Screen](/assets/images/mobile2.JPG)
+![Mobile Screen](/assets/images/mobile3.JPG)
 
 **(top part of page; rest of page is visible if one keeps scrolling)**
 
