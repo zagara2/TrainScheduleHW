@@ -11,156 +11,108 @@
     display: none;
 }
 
-
 body {
     background: url("../images/trainbgnowordsdots6.jpg");
     background-size: cover;
-    background-position:100% 100%;
-    background-repeat:no-repeat;
-     /*background-attachment: local;*/
-
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    /*background-attachment: local;*/
 }
 
 #trainscheduleTable {
-	
-	/*display:block;
+    /*display:block;
 	float:left;*/
-	margin-left: 15%;
-	margin-right:15%;
-	
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #inputNewTrain {
-	/*display: block;
+    /*display: block;
 	float:right;*/
-	margin-left: 15%;
-	margin-right:15%;
-	margin-bottom:10%;
-	
-
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;
 }
-
-
 
 .panel-body {
-	background-color:white;
-	border-style: dashed;
-	color:#008000;
-	font-family: 'Palanquin Dark', sans-serif;
-	margin:20px;
+    background-color: white;
+    border-style: dashed;
+    color: #008000;
+    font-family: 'Palanquin Dark', sans-serif;
+    margin: 20px;
 }
 
-
 .panel-default>.panel-heading {
-	background-color:white;
-	color:#008000;
-	text-align:center;
-	font-family: 'Concert One', cursive;
-	/*font-family: 'Palanquin Dark', sans-serif;*/
-	border-color:#008000;
-	border-width: 5px;
-	font-size:30px;
-	
-
-
-
+    background-color: white;
+    color: #008000;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    /*font-family: 'Palanquin Dark', sans-serif;*/
+    border-color: #008000;
+    border-width: 5px;
+    font-size: 30px;
 }
 
 #bigheading {
-	font-family: 'Concert One', cursive;
-	color:white;
-	font-size:80px;
-	text-shadow: -3px 0 #008000, 0 3px #008000, 3px 0 #008000, 0 -3px #008000;
-	padding:20px;
-
+    font-family: 'Concert One', cursive;
+    color: white;
+    font-size: 80px;
+    text-shadow: -3px 0 #008000, 0 3px #008000, 3px 0 #008000, 0 -3px #008000;
+    padding: 20px;
 }
 
 #submitButton {
-	font-family: 'Palanquin Dark', sans-serif;
-	color:#008000;
-
-
+    font-family: 'Palanquin Dark', sans-serif;
+    color: #008000;
 }
 
 @media screen and (max-width: 1290px) {
-
-	body {
-    background: url("../images/trainbgnowordsdots7.jpg");
-     background-size: cover;
-    background-position:100% 100%;
-    background-repeat:no-repeat;
+    body {
+        background: url("../images/trainbgnowordsdots7.jpg");
+        background-size: cover;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
 }
 
-	}
-
-	@media screen and (max-width: 1034px) {
-
-	body {
-    background: url("../images/bgdots8.jpg");
-     background-size: cover;
-    background-position:100% 100%;
-    background-repeat:no-repeat;
+@media screen and (max-width: 1034px) {
+    body {
+        background: url("../images/bgdots8.jpg");
+        background-size: cover;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
 }
 
-	}
-
-
-	@media screen and (max-width: 650px) {
-		#trainscheduleTable {
-	
-	font-size:10px;
-	
+@media screen and (max-width: 650px) {
+    #trainscheduleTable {
+        font-size: 10px;
+    }
+    #inputNewTrain {
+        font-size: 10px;
+    }
+    #bigheading {
+        font-size: 26px;
+    }
+    .panel-default>.panel-heading {
+        font-size: 12px;
+    }
 }
 
-#inputNewTrain {
-	font-size:10px;
-	
-
+@media screen and (max-width: 520px) {
+    #trainscheduleTable {
+        font-size: 4px;
+    }
+    #inputNewTrain {
+        font-size: 4px;
+    }
+    .panel-body {
+        margin: 2px;
+    }
+    body {
+        background: url("../images/trainbgup.jpg");
+        background-size: contain;
+        /*background-position:100% 100%;*/
+        /*background-repeat:no-repeat;*/
+    }
 }
-
-#bigheading {
-	font-size:26px;
-}
-
-.panel-default>.panel-heading {
-	font-size:12px;
-}
-
-
-}
-
-@media screen and (max-width: 520px) { 
-
-	#trainscheduleTable {
-	
-	font-size:4px;
-	
-}
-
-#inputNewTrain {
-	font-size:4px;
-	
-
-}
-
-.panel-body {
-	
-	margin:2px;
-}
-
-body {
-    background: url("../images/trainbgup.jpg");
-     background-size: contain;
-    /*background-position:100% 100%;*/
-    /*background-repeat:no-repeat;*/
-}
-
-
-
-	}
-
-
-
-
-
-
