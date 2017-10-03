@@ -37,12 +37,6 @@ When the page is loaded properly, it should look like this on a desktop/notebook
 
 ![Desktop/Notebook/Tablet Screen](/assets/images/trainschedule.JPG)
 
-And it should look like this on mobile:
-
-![Mobile Screen](/assets/images/mobile3.JPG)
-
-**(top part of page; rest of page is visible if one keeps scrolling)**
-
 ## Future Plans for Improvement
 
 * Try adding update and remove buttons for each train. Let the user edit the row's elements-- allow them to change a train's Name, Destination and Arrival Time (and then, by relation, minutes to arrival).
